@@ -36,24 +36,37 @@ void display(struct Student student);
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        printf("what dog & cat num?");
+        int dogNums=5, catNums=5;
+        //scanf("%d %d", &dogNums, &catNums);
+        printf("you have %d dogs, %d cats.\n", dogNums, catNums);
+        int dogResult = dogNums ++;
+        int catResult = ++ catNums;
+        printf("you have %d dogs, dog result: %d, %d cats, cat result %d.\n",
+               dogNums, dogResult, catNums, catResult);
+        
+        NSLog(@"hello ===========================================================");
         int i = 100;
         float f = 4345.34;
         char *c = "Object-C";
         NSString *str = @"rory.zhang";
         NSLog(@"Hello, I am %@! I was learning %s. i is %d and f is %f", str, c, i, f);
         
+        NSLog(@"student ===========================================================");
         struct Student student;
         student.name = "rory.zhang";
         student.age = 18;
         student.score = 98.5;
         display(student);
         
+        NSLog(@"car ===========================================================");
         Car *car = [[Car alloc] init];
         car.name = @"Kuyer";
         car.age = 21;
         car.score = 85.55;
         [car display];
         
+        NSLog(@"person ===========================================================");
         Person *person = [[Person alloc] init];
         person.name = @"coolrl";
         [person hello];
